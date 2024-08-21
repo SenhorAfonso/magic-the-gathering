@@ -1,0 +1,7 @@
+[] - Puxar as cartas da API
+[] - salvar as cartas no banco de dados
+[] - montar o deck com 100 cartas
+
+
+criar deck vai puxar as cartas do banco
+se não tiver, ele vai redirecionar para a rota de 
