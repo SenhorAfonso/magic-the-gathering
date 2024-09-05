@@ -11,6 +11,14 @@ export enum UserRoles {
 export class User {
   @Prop()
   @IsString()
+  first_name: string;
+
+  @Prop()
+  @IsString()
+  last_name: string;
+
+  @Prop()
+  @IsString()
   username: string;
 
   @Prop()

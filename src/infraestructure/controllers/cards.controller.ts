@@ -4,9 +4,9 @@ import {
   InternalServerErrorException,
   UseGuards,
 } from '@nestjs/common';
-import { Roles } from 'src/common/decorators/user-roles.decorator';
-import { AuthGuard } from 'src/common/guards/auth.guard';
-import { RolesGuard } from 'src/common/guards/roles.guard';
+import { Roles } from 'src/infraestructure/common/decorators/user-roles.decorator';
+import { AuthGuard } from 'src/infraestructure/common/guards/auth.guard';
+import { RolesGuard } from 'src/infraestructure/common/guards/roles.guard';
 import { UserRoles } from 'src/infraestructure/schemas/user.schema';
 import { PopulateDatabaseUseCase } from 'src/application/use-cases/cards/populate-database.usecase';
 

@@ -5,7 +5,7 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 @Injectable()
 export class LoginUserUseCase extends AuthBaseUseCase {
   async execute(payload: LoginUserDto) {
-    const user = await this.getUserByEmail.execute(payload.email);
+    const user = await this.getUserByEmailUseCase.execute(payload.email);
 
     if (user.password !== payload.password) {
       throw new BadRequestException('Email already taken!');

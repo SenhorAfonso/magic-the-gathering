@@ -8,4 +8,4 @@ import { CreateDeckUseCase } from 'src/application/use-cases/decks/create-deck.u
   providers: [CreateDeckUseCase],
   imports: [CardsModule],
 })
-export class deckModule {}
+export class DeckModule {}

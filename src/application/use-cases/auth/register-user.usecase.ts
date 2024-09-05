@@ -9,7 +9,9 @@ import { AuthBaseUseCase } from './auth-base.usecase';
 @Injectable()
 export class RegisterUserUseCase extends AuthBaseUseCase {
   async execute(payload: RegisterUserDto) {
-    const previousUser = this.getUserByEmail.execute(payload.email);
+    const previousUser = await this.getUserByEmailUseCase.execute(
+      payload.email,
+    );
 
     if (previousUser) {
       throw new BadRequestException('Email already taken!');
